@@ -1,0 +1,145 @@
+<main *ngIf="currentView == 'default'">
+
+  <div>
+    <img (click)="changeView('default')" src="./../../assets/—Pngtree—fix car and vehicle logo_5092587.png" alt="">
+  </div>
+
+  <div>
+    <h1>Welcome</h1>
+    <div class="btn-wrapper">
+      <button (click)="changeView('mechanic')" ion-button expand="block" color="primary">Login As Mechanic</button>
+      <button (click)="changeView('user')" ion-button expand="block" color="primary">Login As User</button>
+    </div>
+    <span>All rights reserved 2023</span>
+  </div>
+
+</main>
+
+<main *ngIf="currentView == 'mechanic'">
+
+  <div>
+    <img (click)="changeView('default')" src="./../../assets/—Pngtree—fix car and vehicle logo_5092587.png" alt="">
+  </div>
+
+  <div >
+    <h1>Login to Continue</h1>
+      <ion-item style="margin-left: 10px;margin-right: 10px;border-radius: 12px;">
+        <ion-input aria-label="Email" value="Email"></ion-input>
+      </ion-item>
+
+      <ion-item style="margin-left: 10px;margin-right: 10px;border-radius: 12px;margin-top: 15px;">
+        <ion-input aria-label="Password" value="Password"></ion-input>
+      </ion-item>
+   
+    <div class="btn-wrapper">
+      <button ion-button expand="block" color="primary">Login</button>
+    </div>
+    <span (click)="changeView('mechanic-signup')">Don't have an Account? SignUp</span>
+  </div>
+
+</main>
+
+<main *ngIf="currentView == 'user'">
+
+  <div>
+    <img (click)="changeView('default')" src="./../../assets/—Pngtree—fix car and vehicle logo_5092587.png" alt="">
+  </div>
+
+  <div >
+    <h1>Login to Continue</h1>
+      <ion-item style="margin-left: 10px;margin-right: 10px;border-radius: 12px;">
+        <ion-input aria-label="Email" value="Email"></ion-input>
+      </ion-item>
+
+      <ion-item style="margin-left: 10px;margin-right: 10px;border-radius: 12px;margin-top: 15px;">
+        <ion-input aria-label="Password" value="Password"></ion-input>
+      </ion-item>
+   
+    <div class="btn-wrapper">
+      <button ion-button expand="block" color="primary">Login</button>
+    </div>
+    <span (click)="changeView('user-signup')">Don't have an Account? SignUp</span>
+  </div>
+
+</main>
+
+<main style="overflow: scroll;" *ngIf="currentView == 'mechanic-signup'">
+
+  <div >
+    <img (click)="changeView('default')" style="height: 280px;position:relative;left: 47px;" src="./../../assets/—Pngtree—fix car and vehicle logo_5092587.png" alt="">
+  </div>
+
+  <div>
+    <h1>SignUp to Continue</h1>
+  <ion-item style="margin-left: 10px;margin-right: 10px;border-radius: 12px;margin-top: 15px;">
+    <ion-input aria-label="Name" value="Name"></ion-input>
+  </ion-item>
+  
+  <ion-item style="margin-left: 10px;margin-right: 10px;border-radius: 12px;margin-top: 15px;">
+    <ion-input aria-label="Email" value="Email"></ion-input>
+  </ion-item>
+  
+  <ion-item style="margin-left: 10px;margin-right: 10px;border-radius: 12px;margin-top: 15px;">
+    <ion-input aria-label="Password" value="Password"></ion-input>
+  </ion-item>
+  
+  <ion-item style="margin-left: 10px;margin-right: 10px;border-radius: 12px;margin-top: 15px;">
+    <ion-input aria-label="CNIC" value="CNIC"></ion-input>
+  </ion-item>
+  
+  <ion-item style="margin-left: 10px;margin-right: 10px;border-radius: 12px;margin-top: 15px;">
+    <ion-input aria-label="Phone" value="Phone"></ion-input>
+  </ion-item>
+
+  <ion-item style="margin-left: 10px;margin-right: 10px;border-radius: 12px;margin-top: 15px;">
+    <ion-input aria-label="Phone" value="Location"></ion-input>
+  </ion-item>
+ 
+
+    </div>
+
+    <div class="btn-wrapper">
+      <button ion-button expand="block" color="primary">Login</button>
+    </div>
+    <span (click)="changeView('mechanic')">Already have an Account? Login</span>
+ 
+
+</main>
+
+<main style="overflow: scroll;" *ngIf="currentView == 'user-signup'">
+
+  <div >
+    <img (click)="changeView('default')" style="height: 280px;position:relative;left: 47px;" src="./../../assets/—Pngtree—fix car and vehicle logo_5092587.png" alt="">
+  </div>
+
+  <div>
+    <h1>SignUp to Continue</h1>
+  <ion-item style="margin-left: 10px;margin-right: 10px;border-radius: 12px;margin-top: 15px;">
+    <ion-input aria-label="Name" value="Name"></ion-input>
+  </ion-item>
+  
+  <ion-item style="margin-left: 10px;margin-right: 10px;border-radius: 12px;margin-top: 15px;">
+    <ion-input aria-label="Email" value="Email"></ion-input>
+  </ion-item>
+  
+  <ion-item style="margin-left: 10px;margin-right: 10px;border-radius: 12px;margin-top: 15px;">
+    <ion-input aria-label="Password" value="Password"></ion-input>
+  </ion-item>
+  
+  <ion-item style="margin-left: 10px;margin-right: 10px;border-radius: 12px;margin-top: 15px;">
+    <ion-input aria-label="Location" value="Location"></ion-input>
+  </ion-item>
+  
+  <ion-item style="margin-left: 10px;margin-right: 10px;border-radius: 12px;margin-top: 15px;">
+    <ion-input aria-label="Phone" value="Phone"></ion-input>
+  </ion-item>
+
+    </div>
+
+    <div class="btn-wrapper">
+      <button ion-button expand="block" color="primary">Login</button>
+    </div>
+    <span (click)="changeView('user')">Already have an Account? Login</span>
+ 
+
+</main>
